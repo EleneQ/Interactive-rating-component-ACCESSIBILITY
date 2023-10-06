@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Interactive rating component</title>
+    <link rel="stylesheet" href="styles/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section id="rating-state" role="region" aria-labelledby="card__title">
+        <div class="container">
+          <div class="card">
+            <svg class="card__star" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m9.067.43 1.99 4.031c.112.228.33.386.58.422l4.45.647a.772.772 0 0 1 .427 1.316l-3.22 3.138a.773.773 0 0 0-.222.683l.76 4.431a.772.772 0 0 1-1.12.813l-3.98-2.092a.773.773 0 0 0-.718 0l-3.98 2.092a.772.772 0 0 1-1.119-.813l.76-4.431a.77.77 0 0 0-.222-.683L.233 6.846A.772.772 0 0 1 .661 5.53l4.449-.647a.772.772 0 0 0 .58-.422L7.68.43a.774.774 0 0 1 1.387 0Z"
+                fill="#FC7614"
+              />
+            </svg>
+            <h1 id="card__title" class="card__title">How did we do?</h1>
+            <p>
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
+            <form>
+              <fieldset class="rate-btns-container">
+                <label class="rate-btn-label">
+                  <input class="rate-btn-input" type="radio" name="rating-group" value="1" />
+                  <span class="rate-btn-value">1</span>
+                </label>
+                <label class="rate-btn-label">
+                  <input class="rate-btn-input" type="radio" name="rating-group" value="2" />
+                  <span class="rate-btn-value">2</span>
+                </label>
+                <label class="rate-btn-label">
+                  <input class="rate-btn-input" type="radio" name="rating-group" value="3" />
+                  <span class="rate-btn-value">3</span>
+                </label>
+                <label class="rate-btn-label">
+                  <input class="rate-btn-input" type="radio" name="rating-group" value="4" />
+                  <span class="rate-btn-value">4</span>
+                </label>
+                <label class="rate-btn-label">
+                  <input class="rate-btn-input" type="radio" name="rating-group" value="5" />
+                  <span class="rate-btn-value">5</span>
+                </label>
+              </fieldset>
+
+              <button class="submit-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="thank-you-state" style="display: none">
+        <div class="container">
+          <div class="card text-center">
+            <img
+              class="ty-card-img-center"
+              src="images/illustration-thank-you.svg"
+            />
+            <p class="rating-result">You selected <span>4</span> out of 5</p>
+            <h1 class="card__title">Thank You!</h1>
+            <p>
+              We appreciate you taking the time to give a rating. If you ever
+              need more support, don’t hesitate to get in touch!
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

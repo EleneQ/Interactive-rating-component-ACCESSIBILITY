@@ -1,0 +1,118 @@
+@import "./variables";
+@import "./generals";
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 23rem;
+  background: linear-gradient(to bottom, $clr-neutral-700 5%, $clr-neutral-800);
+  color: $clr-neutral-300;
+  padding: 2rem;
+  border-radius: 40px;
+}
+
+.card__star {
+  background-color: $clr-neutral-600;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  padding: 1em;
+  margin-bottom: 2rem;
+}
+
+.card__title {
+  color: $clr-neutral-100;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: $fs-600;
+}
+
+.rate-btns-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 1.5rem auto;
+  border: none;
+}
+
+.rate-btn-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  &:hover {
+    color: $clr-neutral-100;
+  }
+}
+
+.rate-btn-input {
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $clr-neutral-600;
+  text-align: center;
+  font-size: $fs-300;
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    background-color: $clr-neutral-200;
+    cursor: pointer;
+  }
+
+  &:checked {
+    background-color: $clr-primary-100;
+  }
+}
+
+.rate-btn-input:checked + .rate-btn-value {
+  color: $clr-neutral-100;
+}
+
+.rate-btn-value {
+  position: absolute;
+  top: 18px;
+  left: 21px;
+  pointer-events: none;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: $clr-primary-100;
+  color: $clr-neutral-100;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 25px;
+  padding-block: 0.8125em;
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    background-color: $clr-neutral-100;
+    color: $clr-primary-100;
+  }
+}
+
+.rating-result {
+  color: $clr-primary-100;
+  background-color: $clr-neutral-600;
+  border-radius: 20px;
+  width: 13em;
+  margin: auto;
+  margin-block: 1.7rem;
+  padding: 0.3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ty-card-img-center {
+  display: block;
+  margin: auto;
+}

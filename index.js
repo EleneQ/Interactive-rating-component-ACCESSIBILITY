@@ -14,7 +14,7 @@ ratingButtons.forEach((button) => {
 });
 
 submitBtn.addEventListener("click", function (e) {
-  e.preventDefault(); //so that the form doesn't get submitted so that the page doesn't get refreshed
+  e.preventDefault(); //so that the form doesn't get submitted and the page doesn't get refreshed
 
   if (rating === "") {
     alert("Please rate us");
